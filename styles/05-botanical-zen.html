@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JEAB — Original Thai Restaurant · 05 Botanical</title>
+<meta name="description" content="JEAB, restaurant thaï original et bar karaoké. Herbes fraîches, saveurs douces, soirées chaleureuses.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/base.css">
+<style>
+:root{--sage:#e6ecdd;--cream:#f7f4ea;--forest:#24402f;--moss:#4f7a56;--clay:#c8683a;--sand:#efe3c9}
+body{background:var(--cream);color:var(--forest);font:400 1.02rem/1.7 'DM Sans',sans-serif}
+.fr{font-family:'Fraunces',serif;font-weight:400}
+.wrap{width:min(1200px,90vw);margin:auto}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;width:min(1100px,92vw);display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 22px;background:rgba(247,244,234,.85);backdrop-filter:blur(14px);border-radius:60px;box-shadow:0 10px 40px rgba(36,64,47,.12)}
+.brand{display:flex;align-items:center;gap:10px;font:500 1.4rem 'Fraunces',serif}.brand img{width:36px;height:36px;border-radius:50%}
+.lk{display:flex;gap:28px;font-size:.92rem;font-weight:500}.lk a{opacity:.75;transition:.25s}.lk a:hover{opacity:1;color:var(--clay)}
+.btn{display:inline-block;padding:13px 28px;border-radius:60px;background:var(--forest);color:var(--cream);font-weight:500;transition:.35s}.btn:hover{background:var(--clay);transform:translateY(-3px)}
+.btn.o{background:transparent;color:var(--forest);border:1.5px solid var(--forest)}.btn.o:hover{background:var(--forest);color:var(--cream)}
+#burger{display:none;background:var(--forest);color:var(--cream);border:0;width:42px;height:42px;border-radius:50%}
+.hero{padding:150px 0 90px;position:relative;overflow:hidden}
+.leaf{position:absolute;width:520px;height:520px;border-radius:70% 30% 60% 40%/50% 60% 40% 50%;background:var(--sage);z-index:0;animation:mor 18s ease-in-out infinite alternate}
+.l1{right:-140px;top:60px}.l2{left:-200px;bottom:-200px;background:var(--sand);width:600px;height:600px;animation-delay:-8s}
+@keyframes mor{50%{border-radius:40% 60% 30% 70%/60% 30% 70% 40%;transform:rotate(25deg) scale(1.06)}}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
+.eb{display:inline-block;padding:7px 18px;background:var(--sage);border-radius:40px;font-size:.82rem;font-weight:500;color:var(--moss)}
+h1{font:400 clamp(3rem,7.4vw,6.6rem)/1 'Fraunces',serif;letter-spacing:-.03em;margin:22px 0 22px}h1 em{color:var(--clay);font-weight:300}
+.lead{max-width:470px;font-size:1.12rem;color:#4b6353}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 22px}
+.pill{display:inline-block;padding:7px 16px;background:#fff;border-radius:40px;font-size:.82rem;box-shadow:0 4px 16px rgba(36,64,47,.08)}
+.arch{position:relative;justify-self:center;width:min(430px,86%)}
+.arch .im{aspect-ratio:3/4;border-radius:999px 999px 28px 28px;overflow:hidden;box-shadow:0 40px 80px rgba(36,64,47,.25);animation:fy 7s ease-in-out infinite}.arch img{width:100%;height:100%;object-fit:cover}
+@keyframes fy{50%{transform:translateY(-14px)}}
+.arch .lg{position:absolute;right:-26px;bottom:50px;width:112px;height:112px;border-radius:50%;background:var(--cream);padding:7px;box-shadow:0 14px 34px rgba(36,64,47,.25);animation:fy 6s ease-in-out -2s infinite}.arch .lg img{border-radius:50%}
+.arch .ch{position:absolute;left:-30px;top:60px;padding:12px 18px;border-radius:20px;background:#fff;box-shadow:0 14px 34px rgba(36,64,47,.18);font-size:.85rem;font-weight:500;animation:fy 8s ease-in-out -4s infinite}.arch .ch b{display:block;font:500 1.4rem 'Fraunces',serif;color:var(--clay)}
+section{padding:110px 0;position:relative}
+.hd{text-align:center;margin-bottom:60px}.hd h2{font:400 clamp(2.3rem,5vw,3.8rem)/1.1 'Fraunces',serif;letter-spacing:-.02em;margin-top:14px}.hd h2 em{color:var(--clay);font-weight:300}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.dish{background:#fff;border-radius:32px;padding:14px;box-shadow:0 14px 40px rgba(36,64,47,.08);transition:.5s}.dish:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(36,64,47,.16)}
+.dish figure{aspect-ratio:4/3;border-radius:22px;overflow:hidden}.dish img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}.dish:hover img{transform:scale(1.08) rotate(1deg)}
+.dish div{padding:20px 12px 10px}.dish h3{font:500 1.7rem 'Fraunces',serif}.dish p{color:#5c7264;font-size:.96rem}.tg{display:inline-block;margin-bottom:8px;padding:3px 12px;border-radius:20px;background:var(--sage);color:var(--moss);font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.vs{background:var(--sage);border-radius:60px 60px 0 0}
+.vg{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:22px;align-items:end}
+.vg figure{overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(36,64,47,.18)}.vg figure:nth-child(1){border-radius:999px 999px 28px 28px;aspect-ratio:3/4}.vg figure:nth-child(2){border-radius:28px;aspect-ratio:1}.vg figure:nth-child(3){border-radius:28px 28px 999px 999px;aspect-ratio:3/4}
+.vg img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s}.vg figure:hover img{transform:scale(1.07)}
+.vg figcaption{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);padding:6px 16px;background:rgba(247,244,234,.92);border-radius:30px;font-size:.82rem;font-weight:500}
+.kar{max-width:720px;margin:56px auto 0;text-align:center;padding:30px 34px;background:var(--cream);border-radius:32px}.kar b{display:block;font:500 1.6rem 'Fraunces',serif;color:var(--clay);margin-bottom:4px}
+.hrs{background:var(--sage)}
+.card{max-width:760px;margin:auto;background:var(--cream);border-radius:40px;padding:30px 44px;box-shadow:0 20px 60px rgba(36,64,47,.12)}
+.hr{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1.5px dashed rgba(36,64,47,.18);font:500 1.35rem 'Fraunces',serif}.hr:last-child{border:0}.hr s{flex:1}.hr span{font:400 1.15rem 'DM Sans';color:var(--moss)}
+.hr.now{background:var(--sand);border-radius:20px;padding-inline:20px;margin-inline:-20px;border-bottom-color:transparent}.hr.now span{color:var(--clay);font-weight:700}
+.res{text-align:center;background:var(--forest);color:var(--cream);overflow:hidden}.res h2{font:400 clamp(2.6rem,7vw,5.6rem)/1 'Fraunces',serif;letter-spacing:-.03em;margin:16px 0 34px}.res h2 em{color:#f0a67a;font-weight:300}
+.res .eb{background:rgba(255,255,255,.12);color:#cfe3d2}.res .btn{background:var(--cream);color:var(--forest)}.res .btn:hover{background:var(--clay);color:#fff}
+.res .leaf{background:rgba(255,255,255,.06);right:-120px;top:-160px}
+footer{background:#1a3024;color:#b8cabc;padding:56px 0 28px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;font-size:.92rem}.fg b{display:block;font:500 1.25rem 'Fraunces',serif;color:var(--cream);margin-bottom:6px}.sg{margin-top:40px;font-size:.75rem;opacity:.6}
+@media(max-width:900px){.lk,nav>.btn{display:none}#burger{display:block}.lk.on{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--cream);padding:22px 8vw;border-radius:28px;box-shadow:0 20px 40px rgba(36,64,47,.15)}
+.hg{grid-template-columns:1fr;gap:50px}.dg,.vg{grid-template-columns:1fr}.vg figure:nth-child(n){aspect-ratio:4/5}.fg{grid-template-columns:1fr 1fr}.card{padding:18px 26px}section{padding:76px 0}.arch .ch{left:0}}
+</style></head><body>
+<nav><a class="brand" href="#top"><img src="../assets/img/logo.webp" alt="Logo JEAB">JEAB</a>
+<div class="lk" id="menu"><a href="#carte">Carte</a><a href="#ambiance">Ambiance</a><a href="#horaires">Horaires</a><a href="#contact">Contact</a></div>
+<a class="btn" href="#reserver">Réserver</a><button id="burger" aria-label="Menu">☰</button></nav>
+
+<header class="hero" id="top"><i class="leaf l1"></i><i class="leaf l2"></i><div class="wrap hg">
+ <div><span class="eb rv">Original Thai Restaurant · Bar Karaoké · Genève</span>
+  <h1 class="rv d1">Des herbes fraîches, des <em>saveurs douces</em></h1>
+  <p class="lead rv d2">Une cuisine thaïlandaise préparée à la commande, dans un cadre chaleureux. Et le soir, un micro pour prolonger la fête.</p>
+  <div class="cta rv d3"><a class="btn" href="#reserver">Réserver une table</a><a class="btn o" href="#carte">Découvrir la carte</a></div>
+  <span class="pill rv d3" data-st><i class="dt"></i><span class="t">…</span></span></div>
+ <div class="arch rv d1"><div class="im"><img src="../assets/img/venue-1.webp" alt="La salle du restaurant JEAB à Genève"></div><div class="lg"><img src="../assets/img/logo.webp" alt=""></div><div class="ch"><b>11h30</b>ouverture</div></div>
+</div></header>
+
+<section id="carte"><div class="wrap"><div class="hd rv"><span class="eb">Les incontournables</span><h2>Nos plats <em>signature</em></h2></div><div class="dg">
+ <article class="dish rv"><figure><img src="../assets/img/dish-1.webp" alt="Plateau de papaye épicée et assortiment de spécialités" loading="lazy"></figure><div><span class="tg">Signature</span><h3>Plateau de papaye</h3><p>Salade de papaye épicée et assortiment de spécialités, sur feuille de bananier.</p></div></article>
+ <article class="dish rv d1"><figure><img src="../assets/img/dish-2.webp" alt="Bœuf grillé, sauce jaew" loading="lazy"></figure><div><span class="tg">Grillade</span><h3>Bœuf grillé, sauce jaew</h3><p>Tranches de bœuf grillées, herbes fraîches et sauce jaew pimentée.</p></div></article>
+ <article class="dish rv d2"><figure><img src="../assets/img/dish-3.webp" alt="Rouleaux et raviolis frits croustillants" loading="lazy"></figure><div><span class="tg">Entrée</span><h3>Entrées croustillantes</h3><p>Rouleaux et raviolis frits, servis avec une sauce douce-pimentée.</p></div></article></div></div></section>
+
+<section class="vs" id="ambiance"><div class="wrap"><div class="hd rv"><span class="eb" style="background:var(--cream)">L'atmosphère</span><h2>Une table, <em>une ambiance</em></h2></div>
+<div class="vg"><figure class="rv"><img src="../assets/img/venue-2.webp" alt="Fresque thaïlandaise du restaurant JEAB" loading="lazy"><figcaption>Décor</figcaption></figure><figure class="rv d1"><img src="../assets/img/venue-3.webp" alt="Soirée karaoké au JEAB" loading="lazy"><figcaption>Soirées karaoké</figcaption></figure><figure class="rv d2"><img src="../assets/img/venue-1.webp" alt="La salle du restaurant JEAB" loading="lazy"><figcaption>La salle</figcaption></figure></div>
+<div class="kar rv"><b>Et le soir, le karaoké</b>Un micro, de la musique et une ambiance conviviale — dès 20h30 — jusqu'à 2 h le jeudi, 4 h les vendredis et samedis.</div></div></section>
+
+<section class="hrs" id="horaires"><div class="wrap"><div class="hd rv"><span class="eb" style="background:var(--cream)">Service</span><h2>Horaires <em>d'ouverture</em></h2></div><div class="card rv"><div id="hr"></div><div style="text-align:center;margin-top:18px"><span class="pill" style="background:var(--sage)" data-st><i class="dt"></i><span class="t">…</span></span></div></div></div></section>
+
+<section class="res" id="reserver"><i class="leaf"></i><div class="wrap" style="position:relative"><span class="eb rv">Réservation</span><h2 class="rv d1">Une table <em>vous attend</em></h2><a class="btn rv d2" href="#contact" data-cfg="phone" data-keep>Réserver par téléphone</a></div></section>
+
+<footer id="contact"><div class="wrap"><div class="fg"><div><b>JEAB</b>Original Thai Restaurant<br>Bar Karaoké · Genève</div><div><b>Adresse</b><span data-cfg="address">…</span></div><div><b>Téléphone</b><span data-cfg="phone">…</span></div><div><b>Instagram</b><span data-cfg="instagram">…</span></div></div><div class="sg">© 2026 JEAB — Site conçu par Origora</div></div></footer>
+<script src="../assets/js/shared.js"></script><script src="../assets/js/config.js"></script><script src="../assets/js/common.js"></script>
+</body></html>
