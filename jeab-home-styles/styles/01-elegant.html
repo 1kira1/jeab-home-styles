@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JEAB — Original Thai Restaurant · 01 Élégant</title>
+<meta name="description" content="JEAB, restaurant thaï original et bar karaoké. Cuisine thaïlandaise préparée à la commande, de midi à tard dans la nuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/base.css">
+<style>
+:root{--ivory:#f5efe2;--paper:#fbf7ee;--ink:#1d1a14;--mut:#6e6757;--gold:#b08a35;--jade:#12302b}
+body{background:var(--ivory);color:var(--ink);font:300 1.02rem/1.75 'Jost',sans-serif}
+.serif{font-family:'Cormorant Garamond',serif}
+.wrap{width:min(1180px,90vw);margin:auto}
+nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(245,239,226,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(176,138,53,.3)}
+.ni{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px;font:500 1.5rem 'Cormorant Garamond',serif;letter-spacing:.3em}
+.brand img{width:40px;height:40px;border-radius:50%}
+.lk{display:flex;gap:34px;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase}
+.lk a{position:relative;padding:4px 0}.lk a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:.4s}.lk a:hover::after{width:100%}
+.btn{display:inline-block;padding:14px 30px;border:1px solid var(--ink);font:500 .72rem 'Jost';letter-spacing:.26em;text-transform:uppercase;transition:.4s}
+.btn:hover{background:var(--ink);color:var(--ivory)}.btn.fill{background:var(--ink);color:var(--ivory)}.btn.fill:hover{background:var(--gold);border-color:var(--gold)}
+#burger{display:none;background:none;border:1px solid var(--ink);width:42px;height:42px;font-size:1.1rem}
+/* hero */
+.hero{padding:150px 0 90px}
+.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{font-size:.72rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold)}
+h1{font:400 clamp(3.4rem,9vw,8rem)/.92 'Cormorant Garamond',serif;margin:20px 0 26px}
+h1 em{font-style:italic;color:var(--gold)}
+.lead{max-width:470px;color:var(--mut);font-size:1.08rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.pill{display:inline-block;margin-top:26px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.pl{position:relative;aspect-ratio:4/5;overflow:hidden}
+.pl img{width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+.pl::before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.7);z-index:2;pointer-events:none}
+.badge{position:absolute;left:-46px;bottom:36px;width:130px;height:130px;z-index:3;border-radius:50%;background:var(--paper);padding:8px;box-shadow:0 20px 40px rgba(0,0,0,.18);animation:spin 28s linear infinite}
+.badge img{border-radius:50%}@keyframes spin{to{transform:rotate(360deg)}}
+.pwrap{position:relative}
+/* strip */
+.strip{border-block:1px solid rgba(29,26,20,.15);padding:22px 0;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-block;animation:mq 40s linear infinite;font:italic 400 1.7rem 'Cormorant Garamond',serif;color:var(--mut)}
+.strip span{margin:0 28px;color:var(--gold)}@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:110px 0}
+.hd{text-align:center;margin-bottom:70px}.hd h2{font:400 clamp(2.4rem,5vw,4rem)/1.1 'Cormorant Garamond',serif;margin-top:10px}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.dish figure{aspect-ratio:4/3;overflow:hidden;margin-bottom:22px}.dish img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}.dish:hover img{transform:scale(1.07)}
+.dish .n{font:italic 400 1rem 'Cormorant Garamond',serif;color:var(--gold)}
+.dish h3{font:500 1.9rem 'Cormorant Garamond',serif;margin:2px 0 6px}.dish p{color:var(--mut);font-size:.95rem}
+.venue{background:var(--jade);color:var(--ivory)}
+.vg{display:grid;grid-template-columns:1.3fr .7fr 1fr;gap:20px;align-items:stretch}
+.vg figure{position:relative;overflow:hidden;min-height:380px}.vg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s}
+.vg figure:hover img{transform:scale(1.06)}.vg figcaption{position:absolute;left:20px;bottom:16px;z-index:2;font:italic 1.4rem 'Cormorant Garamond',serif;text-shadow:0 2px 14px #000}
+.vg figure::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.6))}
+.venue .hd h2{color:var(--ivory)}.venue .eyebrow{color:#d9b866}
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hrs h2{font:400 clamp(2.4rem,5vw,4rem)/1.1 'Cormorant Garamond',serif;margin:10px 0 18px}
+.hr{display:flex;align-items:baseline;gap:12px;padding:17px 0;border-bottom:1px solid rgba(29,26,20,.15)}
+.hr b{font:500 1.6rem 'Cormorant Garamond',serif}.hr s{flex:1;border-bottom:1px dotted var(--gold);transform:translateY(-6px)}.hr span{font:italic 1.5rem 'Cormorant Garamond',serif;color:var(--gold)}
+.hr.now{background:linear-gradient(90deg,rgba(176,138,53,.14),transparent);padding-left:14px;border-left:2px solid var(--gold)}
+.res{background:var(--paper);text-align:center;border-top:1px solid rgba(29,26,20,.12)}
+.res h2{font:400 clamp(2.6rem,6vw,5rem)/1 'Cormorant Garamond',serif;margin:12px 0 30px}
+footer{background:var(--ink);color:#d8d0bd;padding:64px 0 28px;text-align:center}
+footer .ft{font:400 2.4rem 'Cormorant Garamond',serif;letter-spacing:.3em;color:#e2c46f}
+.ci{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:24px 0;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}.ci div{padding:10px 22px;border:1px solid rgba(226,196,111,.35)}
+.sg{font-size:.62rem;letter-spacing:.3em;color:#80786a}
+@media(max-width:900px){.lk,nav .btn{display:none}#burger{display:block}.lk.on{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--ivory);padding:24px 6vw;border-bottom:1px solid var(--gold)}
+.hg,.hrs{grid-template-columns:1fr;gap:44px}.badge{left:auto;right:12px;bottom:-30px;width:96px;height:96px}.dg{grid-template-columns:1fr}.vg{grid-template-columns:1fr}.vg figure{min-height:260px}section{padding:76px 0}.hero{padding-top:120px}}
+</style></head><body>
+<nav><div class="wrap ni"><a class="brand" href="#top"><img src="../assets/img/logo.webp" alt="Logo JEAB">JEAB</a>
+<div class="lk" id="menu"><a href="#carte">La carte</a><a href="#ambiance">Ambiance</a><a href="#horaires">Horaires</a><a href="#contact">Contact</a></div>
+<a class="btn fill" href="#reserver">Réserver</a><button id="burger" aria-label="Menu">☰</button></div></nav>
+
+<header class="hero" id="top"><div class="wrap hg">
+  <div><div class="eyebrow rv">Original Thai Restaurant · Bar Karaoké · Genève</div>
+    <h1 class="rv d1">L'art de la table <em>thaïlandaise</em></h1>
+    <p class="lead rv d2">Des saveurs authentiques, des herbes fraîches et le geste juste du wok — dans un cadre doré, du déjeuner jusqu'à tard dans la nuit.</p>
+    <div class="cta rv d3"><a href="#reserver" class="btn fill">Réserver une table</a><a href="#carte" class="btn">Voir la carte</a></div>
+    <span class="pill rv d3" data-st><i class="dt"></i><span class="t">…</span></span></div>
+  <div class="pwrap rv d1"><div class="pl"><img src="../assets/img/venue-1.webp" alt="La salle du restaurant JEAB à Genève"></div><div class="badge"><img src="../assets/img/logo.webp" alt=""></div></div>
+</div></header>
+
+<div class="strip"><div><span>✦</span>Plateau de papaye<span>✦</span>Bœuf grillé<span>✦</span>Tom Yum<span>✦</span>Entrées croustillantes<span>✦</span>Thé thaï glacé<span>✦</span>Plateau de papaye<span>✦</span>Bœuf grillé<span>✦</span>Tom Yum<span>✦</span>Entrées croustillantes<span>✦</span>Thé thaï glacé<span>✦</span></div></div>
+
+<section id="carte"><div class="wrap"><div class="hd rv"><div class="eyebrow">Les incontournables</div><h2>Nos plats signature</h2></div>
+<div class="dg">
+ <article class="dish rv"><figure><img src="../assets/img/dish-1.webp" alt="Plateau de papaye épicée et assortiment de spécialités" loading="lazy"></figure><div class="n">N° 01</div><h3>Plateau de papaye</h3><p>Salade de papaye épicée et assortiment de spécialités, servis sur feuille de bananier.</p></article>
+ <article class="dish rv d1"><figure><img src="../assets/img/dish-2.webp" alt="Bœuf grillé, sauce jaew" loading="lazy"></figure><div class="n">N° 02</div><h3>Bœuf grillé, sauce jaew</h3><p>Tranches de bœuf grillées, herbes fraîches et sauce jaew pimentée.</p></article>
+ <article class="dish rv d2"><figure><img src="../assets/img/dish-3.webp" alt="Rouleaux et raviolis frits croustillants" loading="lazy"></figure><div class="n">N° 03</div><h3>Entrées croustillantes</h3><p>Rouleaux et raviolis frits, servis avec une sauce douce-pimentée.</p></article>
+</div></div></section>
+
+<section class="venue" id="ambiance"><div class="wrap"><div class="hd rv"><div class="eyebrow">L'atmosphère</div><h2>Une table, une ambiance</h2></div>
+<div class="vg"><figure class="rv"><img src="../assets/img/venue-3.webp" alt="Soirée karaoké au JEAB" loading="lazy"><figcaption>Soirées karaoké</figcaption></figure>
+<figure class="rv d1"><img src="../assets/img/venue-2.webp" alt="Fresque thaïlandaise du restaurant JEAB" loading="lazy"><figcaption>Décor thaï</figcaption></figure>
+<figure class="rv d2"><img src="../assets/img/venue-1.webp" alt="La salle du restaurant JEAB" loading="lazy"><figcaption>La salle</figcaption></figure></div>
+<p class="rv" style="text-align:center;max-width:640px;margin:46px auto 0;color:#cfd8cf">Et le soir, le bar karaoké : un micro, de la musique et une ambiance conviviale pour prolonger la soirée — dès 20h30 — jusqu'à 2 h le jeudi, 4 h les vendredis et samedis.</p></div></section>
+
+<section id="horaires"><div class="wrap hrs"><div class="rv"><div class="eyebrow">Service</div><h2>Horaires d'ouverture</h2><p style="color:var(--mut);max-width:380px">Restaurant ouvert 7j/7. Karaoké du jeudi au samedi dès 20h30 (fermé dimanche à mercredi).</p><span class="pill" data-st><i class="dt"></i><span class="t">…</span></span></div>
+<div class="rv d1" id="hr"></div></div></section>
+
+<section class="res" id="reserver"><div class="wrap"><div class="eyebrow rv">Réservation</div><h2 class="rv d1">Une table vous attend</h2><a class="btn fill rv d2" href="#contact" data-cfg="phone" data-keep>Réserver par téléphone</a></div></section>
+
+<footer id="contact"><div class="wrap"><div class="ft">JEAB</div><p>Original Thai Restaurant · Bar Karaoké · Genève</p>
+<div class="ci"><div>Adresse · <span data-cfg="address">…</span></div><div>Tél · <span data-cfg="phone">…</span></div><div>Instagram · <span data-cfg="instagram">…</span></div></div>
+<div class="sg">© 2026 JEAB — SITE CONÇU PAR ORIGORA</div></div></footer>
+<script src="../assets/js/shared.js"></script><script src="../assets/js/config.js"></script><script src="../assets/js/common.js"></script>
+</body></html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JEAB — Original Thai Restaurant · 09 Cinéma Triptyque</title>
+<meta name="description" content="JEAB, restaurant thaï original et bar karaoké à Genève. La cuisine, le bar, les soirées — en vidéo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Oswald:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/base.css">
+<style>
+:root{--bk:#050505;--wh:#f4f1ea;--am:#f0b04a;--mut:#9a958a}
+body{background:var(--bk);color:var(--wh);font:300 1rem/1.7 'Inter',sans-serif}
+.bod{font-family:'Bodoni Moda',serif}.osw{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em}
+nav{position:fixed;inset:0 0 auto;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 4vw;mix-blend-mode:difference;color:#fff}
+.brand{font:400 1.4rem 'Bodoni Moda',serif;letter-spacing:.3em;display:flex;align-items:center;gap:10px}.brand img{width:34px;height:34px;border-radius:50%}
+.lk{display:flex;gap:30px;font:400 .78rem 'Oswald';letter-spacing:.24em;text-transform:uppercase}.lk a:hover{text-decoration:underline;text-underline-offset:6px}
+.rs{font:400 .78rem 'Oswald';letter-spacing:.24em;text-transform:uppercase;border:1px solid #fff;padding:10px 22px;transition:.3s}.rs:hover{background:#fff;color:#000}
+#burger{display:none;background:none;border:1px solid #fff;color:#fff;width:42px;height:42px}
+/* hero triptych */
+.hero{position:relative;height:100svh;min-height:620px;display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:#000;overflow:hidden}
+.pn{position:relative;overflow:hidden;background:#111 center/cover}.pn video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease-out}
+.hero.go .pn video{transform:scale(1)}
+.pn::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.05) 35%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.85))}
+.pn i{position:absolute;left:18px;bottom:20px;z-index:3;font:400 .7rem 'Oswald';letter-spacing:.3em;text-transform:uppercase;color:#ddd}
+.pn:nth-child(2){animation:rise 1.6s .15s both}.pn:nth-child(1){animation:rise 1.6s both}.pn:nth-child(3){animation:rise 1.6s .3s both}
+@keyframes rise{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+.title{position:absolute;inset:0;z-index:5;display:grid;place-items:center;text-align:center;pointer-events:none;padding:0 4vw}
+.title>div{pointer-events:auto}
+.eb{font:400 .8rem 'Oswald';letter-spacing:.55em;text-transform:uppercase;color:var(--am)}
+h1{font:400 clamp(4.5rem,16vw,15rem)/.85 'Bodoni Moda',serif;letter-spacing:.04em;margin:10px 0 16px;text-shadow:0 10px 60px rgba(0,0,0,.7);animation:tin 2s .5s both}
+@keyframes tin{from{opacity:0;letter-spacing:.3em;filter:blur(14px)}to{opacity:1;letter-spacing:.04em;filter:none}}
+.sub{font:italic 400 clamp(1.1rem,2.4vw,1.7rem) 'Bodoni Moda',serif;color:#e8e2d4;text-shadow:0 4px 24px #000}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.b{display:inline-block;padding:14px 32px;font:400 .8rem 'Oswald';letter-spacing:.26em;text-transform:uppercase;border:1px solid #fff;transition:.3s}.b:hover{background:#fff;color:#000}.b.a{background:var(--am);border-color:var(--am);color:#000}.b.a:hover{background:#fff;border-color:#fff}
+.pill{display:inline-block;margin-top:22px;font:400 .72rem 'Oswald';letter-spacing:.22em;text-transform:uppercase;color:#d8d2c3}
+.scroll{position:absolute;left:50%;bottom:20px;z-index:6;width:1px;height:46px;background:linear-gradient(#fff,transparent);animation:dr 2.2s infinite}@keyframes dr{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* sections */
+section{padding:120px 5vw}.wrap{max-width:1240px;margin:auto}
+.k{font:400 .78rem 'Oswald';letter-spacing:.5em;text-transform:uppercase;color:var(--am)}
+.h{font:400 clamp(2.4rem,6vw,5rem)/1.05 'Bodoni Moda',serif;margin:14px 0 0}.h em{color:var(--am)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.intro p{color:#bdb8ac;font-size:1.1rem;max-width:480px;margin-top:22px}
+.vid{position:relative;aspect-ratio:9/14;overflow:hidden;border-radius:4px}.vid video,.vid img{width:100%;height:100%;object-fit:cover}
+.reel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 5vw 30px;margin:60px -5vw 0;scrollbar-width:none}.reel::-webkit-scrollbar{display:none}
+.rc{flex:0 0 min(300px,72vw);aspect-ratio:9/16;position:relative;scroll-snap-align:start;overflow:hidden;border-radius:4px;background:#111}
+.rc video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}.rc:hover video{transform:scale(1.06)}
+.rc::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.85))}
+.rc b{position:absolute;left:18px;bottom:44px;z-index:2;font:400 1.5rem 'Bodoni Moda',serif}.rc span{position:absolute;left:18px;bottom:18px;z-index:2;font:400 .68rem 'Oswald';letter-spacing:.28em;text-transform:uppercase;color:var(--am)}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:70px}
+.dc figure{aspect-ratio:4/3;overflow:hidden}.dc img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s,filter .6s;filter:saturate(1.05)}.dc:hover img{transform:scale(1.07)}
+.dc h3{font:400 1.7rem 'Bodoni Moda',serif;margin:18px 0 4px}.dc p{color:var(--mut);font-size:.95rem}.dc .n{font:400 .7rem 'Oswald';letter-spacing:.3em;color:var(--am)}
+.night{position:relative;min-height:80vh;display:grid;place-items:center;text-align:center;overflow:hidden;padding:0 6vw}
+.night>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.45) saturate(1.2)}
+.night .in{position:relative;z-index:2;max-width:760px}.night h2{font:400 clamp(2.6rem,7vw,6rem)/1 'Bodoni Moda',serif}.night p{margin-top:18px;color:#ddd6c8;font-size:1.1rem}
+.hrs{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hr{display:flex;align-items:baseline;gap:12px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.14);font:400 1.6rem 'Bodoni Moda',serif}.hr s{flex:1;border-bottom:1px dotted #555;transform:translateY(-6px)}.hr span{font:300 1.05rem 'Inter';color:var(--am)}
+.hr.now{color:var(--am)}.hr.now b::before{content:"▶ ";font-size:.6em;vertical-align:middle}
+.end{text-align:center;padding:140px 5vw;border-top:1px solid #1a1a1a}.end h2{font:400 clamp(3rem,9vw,8rem)/.95 'Bodoni Moda',serif;margin:14px 0 36px}
+footer{padding:50px 5vw 30px;border-top:1px solid #1a1a1a;color:var(--mut);font-size:.9rem}
+.fg{max-width:1240px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}.fg b{display:block;font:400 .75rem 'Oswald';letter-spacing:.3em;text-transform:uppercase;color:var(--wh);margin-bottom:6px}.sg{max-width:1240px;margin:36px auto 0;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:900px){.lk,nav>.rs{display:none}#burger{display:block}.lk.on{display:flex;position:fixed;top:68px;left:0;right:0;flex-direction:column;background:#000;padding:24px 6vw;mix-blend-mode:normal;border-bottom:1px solid #333}
+.hero{grid-template-columns:1fr}.pn:nth-child(2),.pn:nth-child(3){display:none}.pn:nth-child(1){margin:0}.intro,.hrs{grid-template-columns:1fr;gap:40px}.menu{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}section{padding:80px 5vw}.vid{aspect-ratio:3/4}}
+</style></head><body>
+<nav><a class="brand" href="#top"><img src="../assets/img/logo.webp" alt="Logo JEAB">JEAB</a>
+<div class="lk" id="menu"><a href="#histoire">Histoire</a><a href="#carte">La carte</a><a href="#soiree">Soirées</a><a href="#horaires">Horaires</a><a href="#contact">Contact</a></div>
+<a class="rs" href="#reserver">Réserver</a><button id="burger" aria-label="Menu">☰</button></nav>
+
+<header class="hero" id="top">
+ <div class="pn"><video data-v autoplay muted loop playsinline poster="../assets/video/karaoke-1.jpg"><source src="../assets/video/karaoke-1.mp4" type="video/mp4"></video><i>Karaoké</i></div>
+ <div class="pn"><video data-v autoplay muted loop playsinline poster="../assets/video/food-2.jpg"><source src="../assets/video/food-2.mp4" type="video/mp4"></video><i>Cuisine</i></div>
+ <div class="pn"><video data-v autoplay muted loop playsinline poster="../assets/video/bar-2.jpg"><source src="../assets/video/bar-2.mp4" type="video/mp4"></video><i>Bar</i></div>
+ <div class="title"><div><div class="eb">Original Thai Restaurant · Bar Karaoké · Genève</div><h1>JEAB</h1><p class="sub">Une cuisine. Un bar. Une scène.</p>
+  <div class="cta"><a href="#reserver" class="b a">Réserver une table</a><a href="#carte" class="b">Voir la carte</a></div><span class="pill" data-st><i class="dt"></i><span class="t">…</span></span></div></div>
+ <div class="scroll"></div>
+</header>
+
+<section id="histoire"><div class="wrap intro">
+ <div class="rv"><div class="k">Notre maison</div><h2 class="h">Le goût de la Thaïlande, <em>la nuit entière</em></h2><p>À deux pas de la gare Cornavin, JEAB réunit une cuisine thaïlandaise généreuse, un bar à cocktails et un karaoké où chacun prend le micro. Ouvert 7j/7, de midi jusqu'à tard dans la nuit.</p><div style="margin-top:30px"><a class="b" href="#horaires">Voir les horaires</a></div></div>
+ <div class="vid rv d1"><video data-v autoplay muted loop playsinline poster="../assets/video/salle.jpg"><source src="../assets/video/salle.mp4" type="video/mp4"></video></div>
+</div>
+<div class="reel">
+ <div class="rc rv"><video data-v muted loop playsinline poster="../assets/video/food-1.jpg"><source src="../assets/video/food-1.mp4" type="video/mp4"></video><b>Le buffet</b><span>Cuisine</span></div>
+ <div class="rc rv d1"><video data-v muted loop playsinline poster="../assets/video/bar-1.jpg"><source src="../assets/video/bar-1.mp4" type="video/mp4"></video><b>Au bar</b><span>Cocktails</span></div>
+ <div class="rc rv d2"><video data-v muted loop playsinline poster="../assets/video/karaoke-2.jpg"><source src="../assets/video/karaoke-2.mp4" type="video/mp4"></video><b>Au micro</b><span>Karaoké</span></div>
+ <div class="rc rv d3"><video data-v muted loop playsinline poster="../assets/video/rue.jpg"><source src="../assets/video/rue.mp4" type="video/mp4"></video><b>Rue de Monthoux</b><span>Genève</span></div>
+</div></section>
+
+<section id="carte" style="background:#0b0b0b"><div class="wrap"><div class="k">À table</div><h2 class="h">Trois assiettes, <em>trois envies</em></h2>
+<div class="menu">
+ <article class="dc rv"><figure><img src="../assets/img/dish-1.webp" alt="Plateau de papaye épicée" loading="lazy"></figure><div class="n" style="margin-top:16px">N° 01</div><h3>Plateau de papaye</h3><p>Salade de papaye épicée et assortiment de spécialités, sur feuille de bananier.</p></article>
+ <article class="dc rv d1"><figure><img src="../assets/img/dish-2.webp" alt="Bœuf grillé, sauce jaew" loading="lazy"></figure><div class="n" style="margin-top:16px">N° 02</div><h3>Bœuf grillé, sauce jaew</h3><p>Tranches de bœuf grillées, herbes fraîches et sauce jaew pimentée.</p></article>
+ <article class="dc rv d2"><figure><img src="../assets/img/dish-3.webp" alt="Rouleaux et raviolis frits" loading="lazy"></figure><div class="n" style="margin-top:16px">N° 03</div><h3>Entrées croustillantes</h3><p>Rouleaux et raviolis frits, servis avec une sauce douce-pimentée.</p></article>
+</div></div></section>
+
+<section class="night" id="soiree"><img src="../assets/img/venue-3.webp" alt="Soirée karaoké au JEAB" loading="lazy"><div class="in rv"><div class="k">Après le dîner</div><h2>Le micro est à <em style="color:var(--am)">vous</em></h2><p>Karaoké du jeudi au samedi dès 20h30 — jusqu'à 2 h le jeudi, 4 h les vendredis et samedis.</p></div></section>
+
+<section id="horaires"><div class="wrap hrs"><div class="rv"><div class="k">Service</div><h2 class="h">Horaires <em>d'ouverture</em></h2><p style="color:#9a958a;margin-top:18px;max-width:380px">Restaurant ouvert 7j/7. Karaoké du jeudi au samedi dès 20h30.</p><span class="pill" data-st><i class="dt"></i><span class="t">…</span></span></div><div class="rv d1" id="hr"></div></div></section>
+
+<section class="end" id="reserver"><div class="k rv">Réservation</div><h2 class="rv d1">À très vite</h2><a class="b a rv d2" href="#contact" data-cfg="phone" data-keep>Réserver par téléphone</a></section>
+
+<footer id="contact"><div class="fg"><div><b>JEAB</b>Original Thai Restaurant<br>Bar Karaoké · Genève</div><div><b>Adresse</b><span data-cfg="address">…</span></div><div><b>Téléphone</b><span data-cfg="phone">…</span></div><div><b>Instagram</b><span data-cfg="instagram">…</span></div></div><div class="sg">© 2026 JEAB — Site conçu par Origora</div></footer>
+<script>addEventListener('load',function(){document.querySelector('.hero').classList.add('go')})</script>
+<script src="../assets/js/shared.js"></script><script src="../assets/js/config.js"></script><script src="../assets/js/common.js"></script><script src="../assets/js/video.js"></script>
+</body></html>

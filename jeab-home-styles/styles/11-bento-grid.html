@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JEAB — Original Thai Restaurant · 11 Bento</title>
+<meta name="description" content="JEAB, restaurant thaï original et bar karaoké à Genève — vidéos, photos, horaires et adresse en un coup d'œil.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/base.css">
+<style>
+:root{--bg:#f1ebdf;--ink:#16130e;--red:#d43a1f;--gold:#e8b13b;--teal:#12423b;--card:#fbf8f1;--mut:#6e675a}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.6 'Manrope',sans-serif;padding:14px}
+.ser{font-family:'DM Serif Display',serif;font-weight:400}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(110px,auto);gap:14px;max-width:1360px;margin:auto}
+.tl{position:relative;border-radius:28px;overflow:hidden;background:var(--card);padding:26px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.tl:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 60px rgba(22,19,14,.18)}
+.tl>video,.tl>img.bgi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tl.m::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.78))}.tl.m>*:not(video):not(img.bgi){position:relative;z-index:2;color:#fff}
+.lab{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+/* layout */
+.nav{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:#fff;border-radius:60px;padding:10px 12px 10px 22px;flex-direction:row;position:sticky;top:10px;z-index:50}.nav:hover{transform:none;box-shadow:none}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.05em}.brand img{width:34px;height:34px;border-radius:50%}
+.lk{display:flex;gap:26px;font-size:.88rem}.lk a{opacity:.75}.lk a:hover{opacity:1;color:var(--gold)}
+.btn{display:inline-block;padding:13px 26px;border-radius:60px;background:var(--red);color:#fff;font-weight:700;font-size:.9rem;transition:.3s}.btn:hover{background:var(--gold);color:var(--ink);transform:scale(1.04)}.btn.k{background:var(--ink)}.btn.w{background:#fff;color:var(--ink)}
+#burger{display:none;background:#333;border:0;color:#fff;width:40px;height:40px;border-radius:50%}
+.hero{grid-column:span 7;grid-row:span 4;background:var(--teal);color:#fff;justify-content:space-between}
+.hero h1{font:400 clamp(3.4rem,8.4vw,8rem)/.92 'DM Serif Display',serif;letter-spacing:-.02em}.hero h1 em{color:var(--gold)}
+.hero p{max-width:440px;color:#cfe0da;font-size:1.05rem}.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.pill{display:inline-block;padding:7px 16px;border-radius:40px;background:rgba(255,255,255,.14);font-size:.8rem;margin-top:18px}
+.v1{grid-column:span 3;grid-row:span 4}
+.v2{grid-column:span 2;grid-row:span 2}.v3{grid-column:span 2;grid-row:span 2}
+.st{grid-column:span 3;grid-row:span 2;background:var(--gold);justify-content:space-between}.st b{font:400 5.2rem/1 'DM Serif Display',serif}
+.hrs{grid-column:span 4;grid-row:span 3;justify-content:flex-start}
+.hr{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid rgba(22,19,14,.12);font-weight:600;font-size:.95rem}.hr s{display:none}.hr span{font-weight:400;color:var(--mut)}.hr.now{color:var(--red)}.hr.now span{color:var(--red)}.hr:last-child{border:0}
+.ph1{grid-column:span 5;grid-row:span 3}
+.v4{grid-column:1/-1;grid-row:span 3}
+.sec{grid-column:1/-1;padding:44px 22px 6px;background:none;overflow:visible;display:block}.sec:hover{transform:none;box-shadow:none}.sec h2{font:400 clamp(2.2rem,5vw,4rem)/1 'DM Serif Display',serif;margin-top:6px}
+.d{grid-column:span 4;grid-row:span 3;justify-content:flex-end;padding:0;background:var(--card)}.d img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s}.d:hover img{transform:scale(1.06)}.d div{padding:20px 24px 24px}.d h3{font:400 1.7rem 'DM Serif Display',serif;line-height:1.1}.d p{color:var(--mut);font-size:.92rem;margin-top:6px}.d figure{overflow:hidden}
+.karaoke{grid-column:span 8;grid-row:span 3}.karaoke h3{font:400 clamp(2.2rem,4.6vw,4rem)/1 'DM Serif Display',serif}
+.map{grid-column:span 4;grid-row:span 3;background:var(--red);color:#fff;justify-content:space-between}.map b{font:400 1.9rem/1.15 'DM Serif Display',serif;display:block}
+.v5{grid-column:span 3;grid-row:span 3}.v6{grid-column:span 3;grid-row:span 3}
+.rsv{grid-column:span 6;grid-row:span 3;background:var(--ink);color:#fff;justify-content:space-between}.rsv h2{font:400 clamp(2.4rem,5vw,4.4rem)/1 'DM Serif Display',serif}.rsv h2 em{color:var(--gold)}
+.foot{grid-column:1/-1;background:none;padding:34px 22px 14px;color:var(--mut);font-size:.88rem;flex-direction:row;flex-wrap:wrap;gap:36px;justify-content:space-between}.foot:hover{transform:none;box-shadow:none}.foot b{display:block;color:var(--ink)}
+@media(max-width:980px){.lk,.nav>.btn{display:none}#burger{display:block}.lk.on{display:flex;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--ink);padding:22px 8vw;border-radius:26px}
+.bento{grid-template-columns:repeat(2,1fr)}.hero,.hrs,.karaoke,.rsv,.sec,.foot{grid-column:1/-1}.hero{grid-row:auto;min-height:560px}.v1,.v2,.v3,.st,.ph1,.v4,.d,.map,.v5,.v6{grid-column:span 1;grid-row:auto;min-height:220px}.v1{grid-column:1/-1;min-height:420px}.d,.ph1,.v4,.map{grid-column:1/-1}.st b{font-size:3.6rem}.v5,.v6{min-height:320px}}
+</style></head><body>
+<main class="bento">
+<div class="tl nav"><a class="brand" href="#top"><img src="../assets/img/logo.webp" alt="Logo JEAB">JEAB</a>
+ <div class="lk" id="menu"><a href="#carte">La carte</a><a href="#soiree">Soirées</a><a href="#horaires">Horaires</a><a href="#contact">Contact</a></div>
+ <a class="btn" href="#reserver">Réserver</a><button id="burger" aria-label="Menu">☰</button></div>
+
+<div class="tl hero rv" id="top"><div><span class="lab">Original Thai Restaurant · Bar Karaoké · Genève</span></div>
+ <div><h1>Thaï, <em>bar</em> &amp; karaoké</h1><p style="margin-top:18px">Une cuisine thaïlandaise généreuse, des cocktails, et le micro ouvert jusqu'à 4 h. Tout JEAB, en un coup d'œil.</p>
+ <div class="cta"><a class="btn" href="#reserver">Réserver une table</a><a class="btn w" href="#carte">Voir la carte</a></div><span class="pill" data-st><i class="dt"></i><span class="t">…</span></span></div></div>
+
+<div class="tl m v1 rv d1"><video data-v autoplay muted loop playsinline poster="../assets/video/karaoke-1.jpg"><source src="../assets/video/karaoke-1.mp4" type="video/mp4"></video><span class="lab">Karaoké</span><h3 class="ser" style="font-size:2rem;line-height:1.05">Le micro<br>est à vous</h3></div>
+<div class="tl m v2 rv d2"><video data-v autoplay muted loop playsinline poster="../assets/video/bar-2.jpg"><source src="../assets/video/bar-2.mp4" type="video/mp4"></video><span class="lab">Bar</span></div>
+<div class="tl m v3 rv d3"><video data-v autoplay muted loop playsinline poster="../assets/video/food-2.jpg"><source src="../assets/video/food-2.mp4" type="video/mp4"></video><span class="lab">Cuisine</span></div>
+
+<div class="tl st rv"><span class="lab">Fermeture</span><b>4h</b><span style="font-weight:700">les vendredis &amp; samedis</span></div>
+<div class="tl hrs rv d1" id="horaires"><span class="lab" style="margin-bottom:10px">Horaires du restaurant</span><div id="hr"></div><span class="pill" style="background:#ece4d4;margin-top:auto" data-st><i class="dt"></i><span class="t">…</span></span></div>
+<div class="tl m ph1 rv d2"><img class="bgi" src="../assets/img/venue-2.webp" alt="Fresque thaïlandaise du restaurant" loading="lazy" style="object-position:50% 25%"><span class="lab">Le décor</span><h3 class="ser" style="font-size:1.8rem">Fresque thaïlandaise</h3></div>
+<div class="tl m v4 rv d3"><img class="bgi" src="../assets/img/venue-1.webp" alt="La salle du restaurant" loading="lazy" style="object-position:50% 60%"><span class="lab">La salle</span><h3 class="ser" style="font-size:1.8rem">Un cadre chaleureux</h3></div>
+
+<div class="tl sec" id="carte"><span class="lab">La carte</span><h2>Trois envies à partager</h2></div>
+<article class="tl d rv"><figure><img src="../assets/img/dish-1.webp" alt="Plateau de papaye" loading="lazy"></figure><div><span class="lab">N° 01</span><h3>Plateau de papaye</h3><p>Salade de papaye épicée et assortiment de spécialités.</p></div></article>
+<article class="tl d rv d1"><figure><img src="../assets/img/dish-2.webp" alt="Bœuf grillé" loading="lazy"></figure><div><span class="lab">N° 02</span><h3>Bœuf grillé, sauce jaew</h3><p>Herbes fraîches et sauce jaew pimentée.</p></div></article>
+<article class="tl d rv d2"><figure><img src="../assets/img/dish-3.webp" alt="Entrées croustillantes" loading="lazy"></figure><div><span class="lab">N° 03</span><h3>Entrées croustillantes</h3><p>Rouleaux et raviolis frits, sauce douce-pimentée.</p></div></article>
+
+<div class="tl m karaoke rv" id="soiree"><img class="bgi" src="../assets/img/venue-3.webp" alt="Soirée karaoké" loading="lazy"><span class="lab">Après le dîner</span><h3>Karaoké du jeudi au samedi, dès 20h30</h3><p style="margin-top:8px;max-width:520px">Jusqu'à 2 h le jeudi, 4 h les vendredis et samedis. Fermé du dimanche au mercredi.</p></div>
+<div class="tl map rv d1"><span class="lab">Adresse</span><div><b data-cfg="address" data-keep>Rue de Monthoux 25, 1201 Genève</b><p style="margin:10px 0 18px;font-size:.9rem;opacity:.85">Depuis la gare Cornavin : bus 1 ou 25, arrêt Monthoux.</p><a class="btn w" href="#reserver">Réserver</a></div></div>
+
+<div class="tl m v5 rv"><video data-v autoplay muted loop playsinline poster="../assets/video/bar-1.jpg"><source src="../assets/video/bar-1.mp4" type="video/mp4"></video><span class="lab">Cocktails</span></div>
+<div class="tl m v6 rv d1"><video data-v autoplay muted loop playsinline poster="../assets/video/karaoke-2.jpg"><source src="../assets/video/karaoke-2.mp4" type="video/mp4"></video><span class="lab">Ambiance</span></div>
+<div class="tl rsv rv d2" id="reserver"><span class="lab">Réservation</span><div><h2>Une table <em>vous attend</em></h2><div style="margin-top:22px"><a class="btn" href="#contact" data-cfg="phone" data-keep>Réserver par téléphone</a></div></div></div>
+
+<div class="tl foot" id="contact"><div><b>JEAB</b>Original Thai Restaurant · Bar Karaoké</div><div><b>Adresse</b><span data-cfg="address">…</span></div><div><b>Téléphone</b><span data-cfg="phone">…</span></div><div><b>Instagram</b><span data-cfg="instagram">…</span></div><div style="width:100%;font-size:.72rem">© 2026 JEAB — Site conçu par Origora</div></div>
+</main>
+<script src="../assets/js/shared.js"></script><script src="../assets/js/config.js"></script><script src="../assets/js/common.js"></script><script src="../assets/js/video.js"></script>
+</body></html>
